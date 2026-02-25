@@ -1,0 +1,71 @@
+:root {
+    --primary: #ff4d6d;
+    --accent: #ffb3c1;
+    --bg: #0b090a;
+}
+
+body, html {
+    margin: 0; overflow: hidden;
+    background-color: var(--bg);
+    font-family: 'Poppins', sans-serif;
+    color: white; height: 100%;
+}
+
+.card {
+    display: none; position: fixed;
+    width: 100%; height: 100%;
+    justify-content: center; align-items: center;
+    background: radial-gradient(circle at center, #2b0b1a 0%, #0b090a 100%);
+}
+
+.card.active { display: flex; flex-direction: column; }
+
+.glass-box {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem; border-radius: 30px;
+    text-align: center; width: 80%; max-width: 400px;
+}
+
+/* Birthday Photo Styling */
+.birthday-photo-container {
+    width: 200px; height: 200px;
+    margin: 20px auto; border-radius: 50%;
+    border: 5px solid var(--primary);
+    overflow: hidden; box-shadow: 0 0 30px var(--primary);
+}
+
+.her-photo { width: 100%; height: 100%; object-fit: cover; }
+
+/* Game Area */
+#game-area {
+    width: 100%; height: 300px;
+    position: relative; overflow: hidden;
+    background: rgba(0,0,0,0.2); border-radius: 15px;
+}
+
+.falling-heart {
+    position: absolute; cursor: pointer;
+    font-size: 2rem; user-select: none;
+}
+
+/* Animations */
+.glow-text {
+    animation: textGlow 1.5s ease-in-out infinite alternate;
+    color: var(--primary);
+}
+
+@keyframes textGlow {
+    from { text-shadow: 0 0 10px #ff4d6d; }
+    to { text-shadow: 0 0 30px #ff4d6d, 0 0 10px #fff; }
+}
+
+.pulse-button {
+    margin-top: 20px; animation: pulse 2s infinite;
+    color: var(--accent); font-weight: bold;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.5; } 50% { opacity: 1; } 100% { opacity: 0.5; }
+}
