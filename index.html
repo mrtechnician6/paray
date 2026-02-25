@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Queen | NK Digital Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+
+    <audio id="bgMusic" loop>
+        <source src="your-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="main-container">
+        <section class="card active" id="p1" onclick="startExperience('p1', 'p2')">
+            <div class="glass-box animate__animated animate__fadeIn">
+                <h2 id="typewriter"></h2>
+                <div class="pulse-button">Tap to start</div>
+            </div>
+        </section>
+
+        <section class="card" id="p2">
+            <div class="game-container glass-box">
+                <h3>Catch 5 hearts to unlock a memory...</h3>
+                <div class="score">Hearts: <span id="scoreVal">0</span>/5</div>
+                <div id="game-area"></div>
+            </div>
+        </section>
+
+        <section class="card" id="p3" onclick="nextPage('p3', 'p4')">
+            <div class="glass-box">
+                <div class="image-frame">
+                    <img src="couple-photo.jpg" alt="Memory" class="floating-img">
+                </div>
+                <p class="apology-text">"I'm sorry for the past. Let's make the future better."</p>
+                <p class="tap-hint">[ Tap for the big surprise ]</p>
+            </div>
+        </section>
+
+        <section class="card" id="p4">
+            <canvas id="confetti"></canvas>
+            <div class="glass-box bday-card animate__animated animate__zoomIn">
+                <h1 class="glow-text">Happy Birthday!</h1>
+                <div class="birthday-photo-container">
+                    <img src="her-photo.jpg" alt="The Birthday Girl" class="her-photo">
+                </div>
+                <p>You are the most beautiful person I know. <br> Forever yours.</p>
+                <button class="restart" onclick="location.reload()">See it again ❤️</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
